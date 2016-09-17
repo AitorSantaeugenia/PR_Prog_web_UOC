@@ -1,5 +1,5 @@
 # PR_Prog_web_UOC
-PR - Programació Web (UOC)
+<strong>PR - Programació Web (UOC)</strong>
 
-<strong>Responsive website with two games</strong> (pong and "set i mig"), using OOP and DOM (use of localstorage for the login).<br><br>
-Sitio web "responsive" con dos juegos (pong i "set i mig"), usando POO y DOM (con uso de localstorage para el login y almacenamiento de usuarios).
+<strong>Responsive website with two games</strong> (pong and <i>"set i mig"</i>), using OOP and DOM (use of <strong>localstorage</strong> for the login).<br><br>
+<strong>Sitio web "responsive" con dos juegos</strong> (pong i <i>"set i mig"</i>), usando POO y DOM (con uso de <strong>localstorage</strong> para el login y almacenamiento de usuarios).
