@@ -1,0 +1,88 @@
+/* Global Reset & Standards ---------------------- */
+* { border-box; box-sizing: border-box; }
+html { 
+	font-size: 62.5%; 
+	}
+body { 
+	background-image: url('../imagenes/backgr.png');
+	position: relative;
+
+	}
+
+/* The Grid ---------------------- */
+.row { 
+	 width: 1000px;
+	 max-width: 100%;
+	 min-width: 768px;
+	 margin: 0 auto;
+ }
+ 
+.row .twelve { 
+	width: 100%;
+ }
+
+img, object, embed { max-width: 100%; height: auto; padding: 5px 5px 5px 5px;}
+
+/* Mobile Grid and Overrides ---------------------- */
+@media only screen and (max-width: 767px) { 
+	body { 
+	width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+	
+  .row { width: auto; min-width: 0; margin-left: 0; margin-right: 0; }
+  .column:before, .columns:before, .column:after, .columns:after { 
+	content: "";
+	display: table;
+	}
+  .column:after, .columns:after { clear: both; }
+  .push-one-mobile { left: 25%; }
+  .pull-one-mobile { right: 25%; }
+  .push-two-mobile { left: 50%; }
+  .pull-two-mobile { right: 50%; }
+  .push-three-mobile { left: 75%; }
+  .pull-three-mobile { right: 75%; } }
+
+/* COMPORTAMENT MENU */
+.nav-bar { height: 40px; background: #4d4d4d; margin-top: 20px; padding: 0; }
+.nav-bar > li { float: left; display: block; position: relative; padding: 0; margin: 0; border: 1px solid #646464; border-right: none; line-height: 38px; -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; }
+.nav-bar > li:last-child { border-right: solid 1px #646464; -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2); -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2); box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2); }
+.nav-bar > li.active { background: #d72f08; border-color: #2284a1; }
+.nav-bar > li.active > a { color: white; cursor: default; }
+.nav-bar > li.active:hover { background: #d72f08; cursor: default; }
+.nav-bar > li:hover { background: #646464; }
+.nav-bar > li a { color: #e6e6e6; }
+.nav-bar > li > a:first-child { position: relative; padding: 0 20px; display: block; text-decoration: none; font-size: 14px; }
+ul.flyout, .nav-bar li ul { padding: 0; list-style: none; }
+ul.flyout li, .nav-bar li ul li { border-left: solid 3px #CCC; }
+ul.flyout li a, .nav-bar li ul li a { background: #f2f2f2; border: 1px solid #e6e6e6; border-width: 1px 1px 0 0; color: #555; display: block; font-size: 14px; height: auto; line-height: 1; padding: 15px 20px; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
+ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #ebebeb; color: #333; }
+ul.flyout li.active, .nav-bar li ul li.active { margin-top: 0; border-top: 1px solid #4d4d4d; border-left: 4px solid #1a1a1a; }
+ul.flyout li.active a, .nav-bar li ul li.active a { background: #4d4d4d; border: none; color: #fff; height: auto; margin: 0; position: static; top: 0; -webkit-box-shadow: 0 0 0; -moz-box-shadow: 0 0 0; box-shadow: 0 0 0; }
+#noclass{
+	list-style-type: none;
+}
+@media only screen and (max-width: 767px) { 
+  .nav-bar { height: auto; }
+  .nav-bar > li { float: none; display: block; border-right: none; }
+  .nav-bar > li > a.main { text-align: left; border-top: 1px solid #ddd; border-right: none; }
+  .nav-bar > li:first-child > a.main { border-top: none; }
+  .nav-bar > li.has-flyout > a.flyout-toggle { position: absolute; right: 0; top: 0; padding: 22px; z-index: 2; display: block; }
+  .nav-bar > li.has-flyout.is-touch > a.flyout-toggle span { content: ""; width: 0; height: 0; display: block; }
+  .nav-bar > li.has-flyout > a.flyout-toggle:hover span { border-top-color: #141414; }
+  .nav-bar.vertical > li.has-flyout > .flyout { left: 0; }
+}
+
+/* ---------------------- Botons de pàgina principal, button1 en general.css per el joc de les cartes ---------------------- */
+.button2 { width: 500px; background-color: rgb(77, 77, 77); border: 1px solid #646464; color: white; cursor: pointer; display: inline-block; font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 14px; font-weight: bold; line-height: 1; margin: 0; outline: none; padding: 10px 20px 11px; position: relative; text-align: center; text-decoration: none;transition: background-color 0.15s ease-in-out;}
+.button2:hover { color: white; background-color: #cd0000; }
+.button2:active { background: #cd0000; }
+
+.button3 { width: 100px; background-color: rgb(77, 77, 77); border: 1px solid #646464; color: white; cursor: pointer; display: inline-block; font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 14px; font-weight: bold; line-height: 1; margin: 0; outline: none; padding: 10px 20px 11px; position: relative; text-align: center; text-decoration: none;transition: background-color 0.15s ease-in-out;}
+.button3:hover { color: white; background-color: #cd0000; }
+.button3:active { background: #cd0000; }
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+#titol{
+	text-align: center;
+	font-size: 30px;
+	font-family: "Verdana"	;
+}

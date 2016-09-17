@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="cat">
+<!-- INICI HEAD -->
+	<head>
+	
+	<script src="../javascripts/js_slider_imagenes.js" type="text/javascript"></script>
+	<script src="../javascripts/jquery-1.5.2.min.js"></script>
+	  <meta charset="utf-8" />
+	  <!-- Set the viewport width to device width for mobile -->
+	  <meta name="viewport" content="width=device-width" />
+		<title>Game 5</title>
+		
+
+	  <!-- Included CSS Files -->
+	  <link rel="stylesheet" href="../stylesheets/foundation.css">
+	  <link rel="stylesheet" href="../stylesheets/general.css">
+	  
+	  
+	</head>
+<!-- INICI HEAD -->
+	
+<!-- ----------------------- BODY ----------------------- -->
+<body>
+<!-- LOGO  -->
+	<div class="row">
+		<div class="twelve columns">
+		<img src="../imagenes/logo.png" align="left"/>
+		<p align="left"><h2>La teva pàgina de videojocs</h2></p>
+		</div>
+	</div>
+<!-- FI LOGO  -->
+	
+<!------------------------- INICI MENU ------------------------->
+	<div class="row">
+		<div class="twelve columns">
+			<ul class="nav-bar">
+ 		 		<li><a href="index.html">Home</a></li>
+  				<li class="active"><a href="games.html">Jocs</a></li>
+  				<!-- <li><a href="#">3 page</a></li> -->
+  				<!-- <li><a href="#">Sobre nossaltres</a></li> -->
+			</ul>
+			
+		</div>
+	</div>
+<!-- ------------------------ FI MENU ------------------------->
+
+	
+	<div class="row">
+		<div class="twelve columns">
+<!------------------------- INICI SLIDER ------------------------- -->	
+	<div id="sliderFrame">
+		<a href="javascript:gotoshow()"><img src="../imagenes/imagen-slider-1.jpg" name="slide" border=0 width=700 height=460></a>
+			<script>
+			slideshowImagenes("../imagenes/imagen-slider-1.jpg","../imagenes/imagen-slider-2.jpg","../imagenes/imagen-slider-3.jpg","../imagenes/imagen-slider-4.jpg","../imagenes/imagen-slider-5.jpg", "../imagenes/imagen-slider-6.jpg")
+			slideshowLinks("../pong.html","../setIMitg.html","../pacMan.html","../sonic.html","../superMario.html","../tetris.html")
+			
+			var velocidadSlideshow=2000
+			
+			var queLink=0
+			var queImagen=0    	
+			function slideit(){
+			if (!document.images)
+			return
+			document.images.slide.src=slideImagenes[queImagen].src
+			queLink=queImagen
+			if (queImagen<slideImagenes.length-1)
+			queImagen++
+			else
+			queImagen=0
+			setTimeout("slideit()",velocidadSlideshow)
+			}
+			slideit()
+			</script>
+
+		<div id="thumbs">
+		
+			<div class="thumb">
+				<div id="thumb1"><a href="../pong.html"</a>
+							<div class="frame"><img src="../imagenes/imagen-slider-1.jpg"></div>
+					<div class="thumb-content" align="center"><p>Pong</p>El joc de tenis m&eacutes popular</div>
+					<div style="clear:both;"></div>
+				</div>
+			</div> 
+			
+			<div class="thumb">
+			<div id="thumb2"><a href="../setIMitg.html"</a>
+				<div class="frame"><img src="../imagenes/imagen-slider-2.jpg" /></div>
+				<div class="thumb-content" align="center"><p>Set i mitg</p>Joc de cartes molt entretingut</div>
+				<div style="clear:both;"></div>
+			</div>
+			</div>
+			
+			<div class="thumb">
+			<div id="thumb3"><a href="../pacMan.html"</a>
+				<div class="frame"><img src="../imagenes/imagen-slider-3.jpg" /></div>
+				<div class="thumb-content" align="center"><p>Pac-Man</p>Un cl&aacutesic </div>
+				<div style="clear:both;"></div>
+			</div>
+			</div>
+			
+			<div class="thumb">
+			<div id="thumb4"><a href="../sonic.html"</a>
+				<div class="frame"><img src="../imagenes/imagen-slider-4.jpg" /></div>
+				<div class="thumb-content" align="center"><p>Sonic</p>El joc m&eacutes fam&oacutes de SEGA</div>
+				<div style="clear:both;"></div>
+			</div>
+			</div>
+			
+			<div class="thumb">
+			<div id="thumb5"><a href="../superMario.html"</a>
+				<div class="frame"><img src="../imagenes/imagen-slider-5.jpg" /></div>
+				<div class="thumb-content" align="center"><p>Super Mario</p>El joc m&eacutes fam&oacutes de Nintendo</div>
+				<div style="clear:both;"></div>
+			</div>
+			</div>
+			
+			<div class="thumb">
+			<div id="thumb6"><a href="../tetris.html"</a>
+				<div class="frame"><img src="../imagenes/imagen-slider-6.jpg" /></div>
+				<div class="thumb-content" align="center"><p>Tetris</p>Un altre cl&aacutesic rus</div>
+				<div style="clear:both;"></div>
+			</div>
+			</div>
+			
+		</div>
+<!------------------------- FI SLIDER ------------------------- -->	
+    </div>
+		</div>
+	</div>
+	
+<!-- ------------------------- INICI FOOTER ------------------------- -->
+	<div class="row">
+		<div class="twelve columns">
+		<p align="center">©2016 PR Programació web.</p>
+		</div>
+	</div>
+<!-- ------------------------- INICI FOOTER ------------------------- -->
+</body>
+<!-- ----------------------- FI DE BODY ----------------------- -->
+</html>

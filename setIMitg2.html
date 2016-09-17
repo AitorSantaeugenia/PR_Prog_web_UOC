@@ -1,0 +1,124 @@
+<html>
+<head>
+    <script type="text/javascript" language="javascript" src="javascripts/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="javascripts/js_setIMitg.js"></script>
+	<link href="stylesheets/general3.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="gameFrame">
+		<div id="setiMitg">			
+			<div id="banca">
+				<p>Banca</p>
+				<ul class ="cartesB">
+				<img id="cartaB" src="imagenes/e41.png" name="cartaB"/>
+				</ul>
+				<script>
+//					var cartaBanca = jugaLaBanca();
+					var cartesBanca = [];
+					var valorCartesBanca =[];
+					var nCartesBanca = cartesBanca.length;
+					
+//					cartesBanca.push(cartaBanca);
+														
+					for(i=0; i < nCartesBanca; i++) {
+						mostrarCarta(cartesBanca[i]);											
+						var valorCartaBanca = valorCarta(cartesBanca[i]);				
+						valorCartesBanca.push(valorCartaBanca);
+					}
+					
+					var valorBB = valorMaB();
+										
+				</script>
+			</div>
+			<div id="jugador">
+				<p>Jugador</p>
+				<ul class="cartesJ">
+					<img id="cartaJ" src="imagenes/e40.png" name="cartaJ"/>
+				</ul>
+				<script>
+				
+				/* depenent del valor de les cartes del jugador mostrem uns boton o altres*/
+				window.onload = function(){					
+					if (valorJJ <= 7.5) { 
+						document.getElementById('demanarCarta').style.display = 'block';
+						document.getElementById('mePlanto').style.display = 'block';
+						document.getElementById('reset').style.display = 'none';
+						} else { 
+							document.getElementById('demanarCarta').style.display = 'none';
+							document.getElementById('mePlanto').style.display = 'none';
+							document.getElementById('reset').style.display = 'block';
+						}			
+				}
+								
+				/* Jugador*/
+				/* la banca ens dona una carta aleatoria*/
+				var cartaAleatoria = treureCarta();	
+				var altraCarta = treureCarta();
+				var altraCarta2 = treureCarta();								
+											
+				/* creem un array per guardar-hi les diferents cartes del jugador */
+				var cartesJugador = [];
+				/* creem un array per guardar-hi els diferents valors de les cartes del jugador */
+				var valorCartesJugador = [];						
+//				var cartaJugador = cartaAleatoria;				
+				cartesJugador.push(cartaAleatoria);
+//				cartesJugador.push(altraCarta);
+//				cartesJugador.push(altraCarta2);							
+				var nCartesJugador = cartesJugador.length;
+												
+				/* mostrem les cartes que han sortit*/
+				for(j=0; j < nCartesJugador; j++) {
+					mostrarCarta(cartesJugador[j]);											
+					var valorCartaJugador = valorCarta(cartesJugador[j]);				
+					valorCartesJugador.push(valorCartaJugador);
+				}
+				var pJ1 = document.createElement("P");
+				var nJ1 = document.createTextNode("Has jugat " + nCartesJugador + " carta.");
+				var nJ2 = document.createTextNode("Has jugat " + nCartesJugador + " cartes.");
+				/* Mostrem el numero de cartes del jugador */
+				if (nCartesJugador == 1){
+					pJ1.appendChild(nJ1);
+					document.getElementById("jugador").appendChild(pJ1);
+					} else {
+						pJ1.appendChild(nJ2);
+						document.getElementById("jugador").appendChild(pJ1);
+					}
+				var valorJJ = valorMa();
+				var pJ2 = document.createElement("P");
+				var vJ1 = document.createTextNode("Puntuaci\u00F3 total: " + valorJJ + " punts.");
+				var vJ2 = document.createTextNode("Puntuaci\u00F3 total: " + valorJJ + " punts. Has perdut. Si vols, pots tornar a jugar.");
+				
+				if (valorJJ <= 7.5) {
+					pJ2.appendChild(vJ1);
+					document.getElementById("jugador").appendChild(pJ2);
+					} else {
+						pJ2.appendChild(vJ2);
+						document.getElementById("jugador").appendChild(pJ2); 
+					}				
+				
+//				 Mostrem el numero de cartes del jugador 
+//				if (nCartesJugador == 1){
+//					document.write("<br />Has jugat " + nCartesJugador + " carta.<br />");
+//					} else {
+//						document.write("<br />Has jugat " + nCartesJugador + " cartes.<br />");
+//					}
+				
+//				 Mostrem el valor de les cartes del jugador 
+				var valorJJ = valorMa();
+//				if (valorJJ <= 7.5) {
+//					document.write("Puntuaci&oacute total: " + valorJJ + " punts<br />");
+//					} else { 
+//						document.write("Puntuaci&oacute total: " + valorJJ + " punts. Has perdut. Si vols, torna a jugar. <br />");
+//					}														
+				</script>
+				<form id="botonsJugador" action="">
+					<button id="demanarCarta" name="demanarCarta" value="Demanar Carta" class="button" onclick="afegirCarta(); return false;">Demanar Carta</button>
+					<button id="mePlanto" name="mePlanto" class="button" onclick="alert('\u00C9s el torn de la banca'); maBanca(); return false;">Plantar-se</button>
+					<button id="reset" name="reset" value="Tornar a Jugar" class="button" onclick="if (confirm ('Vols tornar a jugar??')){refrescarPagina()}">Tornar a jugar</button>
+				</form>
+				
+			</div>			
+		</div>	
+	</div>
+</body>
+</html>

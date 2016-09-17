@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cat">
+<!-- INICI HEAD -->
+	<head>
+	
+	<script src="javascripts/js_slider_imagenes.js" type="text/javascript"></script>
+	<script src="javascripts/jquery-1.5.2.min.js" type="text/javascript"></script>
+	  <meta charset="utf-8" />
+	  <!-- Set the viewport width to device width for mobile -->
+	  <meta name="viewport" content="width=device-width" />
+		<title>Game 5</title>
+		
+
+	  <!-- Included CSS Files -->
+	  <link rel="stylesheet" href="stylesheets/foundation.css">
+	  <link rel="stylesheet" href="stylesheets/general.css">
+	  
+	  
+	</head>
+<!-- INICI HEAD -->
+	
+<!-- ----------------------- BODY ----------------------- -->
+<body>
+
+<!-- LOGO  -->
+	<div class="row">
+		<div class="twelve columns">
+		<img src="imagenes/logo.png" align="left"/>
+		<p align="left"><h2>La teva pàgina de videojocs</h2></p>
+		</div>
+	</div>
+<!-- FI LOGO  -->
+	
+<!------------------------- INICI MENU ------------------------->
+	<div class="row">
+		<div class="twelve columns">
+			<ul class="nav-bar">
+ 		 		<li class="active"><a href="index.html">Home</a></li>
+  				<!-- <li><a href="games.html">Jocs</a></li> -->
+  				<!-- <li><a href="#">Inspiration</a></li> -->
+  				<!-- <li><a href="#">Sobre nossaltres</a></li> -->
+			</ul>
+			
+		</div>
+	</div>
+<!-- ------------------------ FI MENU ------------------------->
+
+	
+	<div class="row">
+		<div class="twelve columns">
+<!------------------------- INICI DIV del BODY ------------------------- -->	
+	<div id="sliderFrame" align="center">
+	<h1>Benvingut a Game 6, aquí podrás gaudir dels millors jocs que han existit. </h1><br> 
+	<a><img src="imagenes/imagen-slider-1.jpg" name="slide" border=0 width=700 height=460></a>
+			<script>
+			<!-- CODI DEL SLIDER -->
+			slideshowImagenes("imagenes/imagen-slider-1.jpg","imagenes/imagen-slider-2.jpg","imagenes/imagen-slider-3.jpg","imagenes/imagen-slider-4.jpg","imagenes/imagen-slider-5.jpg", "imagenes/imagen-slider-6.jpg")
+			<!-- slideshowLinks("pong.html","setIMitg.html","pacMan.html","sonic.html","superMario.html","tetris.html") -->
+			
+			var velocidadSlideshow=2000
+			
+			var queLink=0
+			var queImagen=0    	
+			function slideit(){
+			if (!document.images)
+			return
+			document.images.slide.src=slideImagenes[queImagen].src
+			queLink=queImagen
+			if (queImagen<slideImagenes.length-1)
+			queImagen++
+			else
+			queImagen=0
+			setTimeout("slideit()",velocidadSlideshow)
+			}
+			slideit()
+			</script>
+			
+		<div>
+		<br>
+		<h1>Per a gaudir dels nostres jocs, primer t'has de enregistrar </h2>
+			<button class="button3" alt="Registre" onclick="window.location.href='registre.html'">Registre</button>
+			<button class="button3" alt="Inici sessió" onclick="window.location.href='login2.html'">Login</button>
+		<!-- <a href="login2.html">Iniciar sessió</a> -->
+		</div>
+		
+		</div>
+		
+	</div>
+<!------------------------- FI DIV del BODY ------------------------- -->	
+    </div>
+	
+	
+<!-- ------------------------- INICI FOOTER ------------------------- -->
+	<div class="row">
+		<div class="twelve columns">
+		<p align="center">©2016 Pràctica Programació web.</p>
+		</div>
+	</div>
+<!-- ------------------------- INICI FOOTER ------------------------- -->
+</body>
+<!-- ----------------------- FI DE BODY ----------------------- -->
+</html>

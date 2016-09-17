@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="cat">
+<!-- INICI HEAD -->
+	<head>
+	
+	<script src="javascripts/js_slider_imagenes.js" type="text/javascript"></script>
+	  <meta charset="utf-8" />
+	  <!-- Set the viewport width to device width for mobile -->
+	  <meta name="viewport" content="width=device-width" />
+		<title>Game 5</title>
+		
+
+	  <!-- Included CSS Files -->
+	  <link rel="stylesheet" href="stylesheets/foundation.css">
+	  <link rel="stylesheet" href="stylesheets/general.css">
+	  
+	  
+	</head>
+<!-- INICI HEAD -->
+	
+<!-- ----------------------- BODY ----------------------- -->
+<body>
+<!-- LOGO  -->
+	<div class="row">
+		<div class="twelve columns">
+		<img src="imagenes/logo.png" align="left"/>
+		<p align="left"><h2>La teva pàgina de videojocs</h2></p>
+		</div>
+	</div>
+<!-- FI LOGO  -->
+	
+<!------------------------- INICI MENU ------------------------->
+	<div class="row">
+		<div class="twelve columns">
+			<ul class="nav-bar">
+ 		 		<li><a href="log/index.html">Home</a></li>
+  				<li class="active"><a href="games.html">Jocs</a></li>
+  				<!-- <li><a href="#">3 page</a></li> -->
+  				<!-- <li><a href="#">Sobre nossaltres</a></li> -->
+			</ul>
+			
+		</div>
+	</div>
+<!-- ------------------------ FI MENU ------------------------->
+
+
+	<div class="row">
+		<div class="twelve columns">
+		
+		
+		
+		
+<!------------------------- INICI IFRAME PONG ------------------------- -->	
+	<div id="sliderFrame">
+		<a id="titol"> PACMAN </a>
+		<!-- <iframe src="setIMitg2.html" scrolling="no" id="myIframe" width="101%" height="800px" onfocus="offf()" onblur="onn()"> -->
+		<iframe src='http://www.minijuegostop.com.mx/showFlash.php?id=45' width='950' height='700' frameborder=10></iframe> 
+		<p>Fuente: <a href="http://www.minijuegostop.com.mx/full.php?id=45">http://www.minijuegostop.com.mx/full.php?id=45</a></p>
+		</iframe>	
+	</div>
+	<button class="button2" onClick="offf()" alt="Jugar">Jugar (Amagar scroll)</button><button class="button2" onClick="onn()" alt="Aturar">Aturar (Mostrar scroll)</button>
+	<script> 
+		function offf(){
+			document.getElementsByTagName("body")[0].style.overflowY = "hidden";
+			}
+
+			function onn(){
+			document.getElementsByTagName("body")[0].style.overflowY = "auto";
+			}
+	</script>
+
+	
+<!-- ALTRE METODE PER ELIMINAR SCROLL AL JUGAR AL PONG
+<script>
+focus();
+var listener = addEventListener('blur', function() {
+	if(document.activeElement === document.getElementById('myIframe')) {
+		document.getElementsByTagName("body")[0].style.overflowY = "hidden";
+	}
+    removeEventListener(listener);
+	
+});
+</script>
+-- >
+
+
+<!------------------------- FI IFRAME PONG ------------------------- -->	
+
+
+
+
+    </div>
+	
+	<!-- TEST BOTONS ATURAR SCROLL
+	<button id=a onClick="offf()">PLAY (hide scroll)</button><button id=b onClick="onn()">STOP (show scroll)</button> -->
+		</div>
+
+	
+<!-- ------------------------- INICI FOOTER ------------------------- -->
+	<div class="row">
+		<div class="twelve columns">
+		<p align="center">©2016 PR Programació web.</p>
+		</div>
+	</div>
+<!-- ------------------------- INICI FOOTER ------------------------- -->
+</body>
+<!-- ----------------------- FI DE BODY ----------------------- -->
+</html>

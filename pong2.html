@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <title>PONG</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.css" />
+    <link rel="stylesheet" href="stylesheets/font-awesome.min.css" />
+    <style type="text/css">
+	    body {
+	    	background-color: aliceblue;
+	    }
+		.fa-heart {
+			color:red;
+		}
+    </style>
+    
+  </head>
+  <body>
+  	<div>
+	  	<div class="row" style="padding: 10px 30px;">
+	  		<div class="text-left" style="width:200px; float:left;">
+	  			<h3 style="margin:0"><label>Punts</label></h3>
+	  			<input id="points" value="" placeholder="" disabled></input>
+	  			
+	  		</div>
+	  		
+	  		<div class="text-left" id="container" style="width:100%; float:left;">
+				
+	  		</div>
+
+	  		<div class="text-left" style="width:200px; float:left; ">
+	  			<h3 style="margin:0" id="lifes">Vides 
+	  				<i id="life1" class="fa fa-heart"></i> 
+	  				<i id="life2" class="fa fa-heart"></i> 
+	  				<i id="life3" class="fa fa-heart"></i>
+	  			</h3>
+	  		</div>
+	  		
+	  	</div>
+	  </div>
+
+  	
+  	
+  	<script type="text/javascript" src="javascripts/pong.js"></script>
+  	<div style="width:1200px; padding-left:10px;" >
+  		<div class="text-left">
+  			<button id="start-btn" href="" class="btn btn-success" onclick="startGame()">Iniciar Joc</button>
+		  	<button id="restart-btn" href="" class="btn btn-success" style="display:none;" onclick="restartGame()">Reiniciar</button>
+		  	<button href="" class="btn btn-warning" onclick="stillGame()"><i class="fa fa-pause" aria-hidden="true"></i> Aturar</button>
+		  	<button href="" class="btn btn-success" onclick="continueGame()"><i class="fa fa-play" aria-hidden="true"></i> Continuar</button>
+  		</div>
+  		
+  	</div>
+  	
+  </body>
+</html>

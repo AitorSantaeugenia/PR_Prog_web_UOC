@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="cat">
+<!-- INICI HEAD -->
+	<head>
+	
+	<script src="javascripts/js_slider_imagenes.js" type="text/javascript"></script>
+	  <meta charset="utf-8" />
+	  <!-- Set the viewport width to device width for mobile -->
+	  <meta name="viewport" content="width=device-width" />
+		<title>Game 5</title>
+		
+
+	  <!-- Included CSS Files -->
+	  <link rel="stylesheet" href="stylesheets/foundation.css">
+	  <link rel="stylesheet" href="stylesheets/general.css">
+	  <script src="javascripts/validations_formulari.js"></script>
+	  <script src="javascripts/jquery-1.5.2.min.js"></script>
+	  
+	  
+	</head>
+<!-- INICI HEAD -->
+	
+<!-- ----------------------- BODY ----------------------- -->
+<body onLoad="document.registration.userid.focus();">
+<!-- LOGO  -->
+	<div class="row">
+		<div class="twelve columns">
+		<img src="imagenes/logo.png" align="left"/>
+		<p align="left"><h2>La teva pàgina de videojocs</h2></p>
+		</div>
+	</div>
+<!-- FI LOGO  -->
+	
+<!------------------------- INICI MENU ------------------------->
+	<div class="row">
+		<div class="twelve columns">
+			<ul class="nav-bar">
+ 		 		<li class="active"><a href="index.html">Home</a></li>
+  				<!-- <li><a href="games.html">Jocs</a></li> -->
+  				<!-- <li><a href="#">Inspiration</a></li> -->
+  				<!-- <li><a href="#">Sobre nossaltres</a></li> -->
+			</ul>
+			
+		</div>
+	</div>
+<!-- ------------------------ FI MENU ------------------------->
+
+	
+	<div class="row">
+		<div class="twelve columns">
+<!------------------------- INICI DIV del BODY ------------------------- -->	
+	<div id="sliderFrame">
+		<p><strong> Tots els camps son obligatoris.</strong></p>
+		<form name='registration' onSubmit="return formValidation();" method="get" action="login2.html">
+			<ul>
+				<li><label for="userid">Nick:</label></li>
+				<li id="noclass"><input type="text" name="userid" size="12" /> <span id="minired"> [No buit | 5 ~ 12 caracters] </span></li>
+				
+				<li><label for="passid">Password:</label></li>
+				<li id="noclass"><input type="password" name="passid" id="passw1val" size="12" /> <span id="minired"> [No buit | 7 ~ 12 caracters]  </span></li>
+				
+				<li><label for="passid2">Repeteix password:</label></li>
+				<li id="noclass"><input type="password" name="passid2" id="passw2val" size="12" /> <span id="minired"> [No buit | 7 ~ 12 caracters]  </span></li>
+				
+				<li><label for="username">Nom:</label></li>
+				<li id="noclass"><input type="text" name="username" size="50" /><span id="minired"> [No buit | No espais]  </span></li>
+				
+				<li><label for="coname">Cognom:</label></li>
+				<li id="noclass"><input type="text" name="conamen" size="50" /><span id="minired"> [No buit | No espais] </span></li>
+				
+				<li><label for="birth">Data de naixament:</label></li>
+				<li id="noclass"><input type="text" name="birthn" size="50" /><span id="minired"> [DD/MM/AAAA] </span></li> <!-- DATE -->
+				
+				<li><label for="dni">DNI:</label></li>
+				<li id="noclass"><input type="text" name="dni" size="50" id="dniconjo"/><span id="minired"> [XXXXXXXXY] </span><!-- onblur="dniLetter(this.value)" --> </li>
+				
+				<li><label for="address">Direcció:</label></li>
+				<li id="noclass"><input type="text" name="addressn" size="50" /><span id="minired"> [No buit | Lletres + Num] </span></li>
+				
+				<li><label for="country">Província:</label></li>
+				<li id="noclass"><select name="country" >
+					<option selected="" value="Default">(Selecciona província)</option>
+					<option value="ALV">Álava</option>
+					<option value="ALB">Albacete</option>
+					<option value="ALI">Alicante</option>
+					<option value="ALM">Almeria</option>
+					<option value="AST">Asturias</option>
+					<option value="AVI">Ávila</option>
+					<option value="BAD">Badajoz</option>
+					<option value="BAR">Barcelona</option>
+					<option value="BUR">Burgos</option>
+					<option value="CA">Cáceres</option>
+					<option value="CAD">Cádiz</option>
+					<option value="CAN">Cantabria</option>
+					<option value="CAS">Castellón</option>
+					<option value="CRE">Ciudad Real</option>
+					<option value="COR">Córdoba</option>
+					<option value="LAC">La Coruña</option>
+					<option value="CUE">Cuenca</option>
+					<option value="GER">Girona</option>
+					<option value="GRA">Granada</option>
+					<option value="GUA">Guadalajara</option>
+					<option value="GUI">Guipúzcoa</option>
+					<option value="HUE">Huelva</option>
+					<option value="HUC">Huesca</option>
+					<option value="IB">Islas Baleares</option>
+					<option value="JAE">Jaén</option>
+					<option value="LEO">León</option>
+					<option value="LER">Lleida</option>
+					<option value="LUG">Lugo</option>
+					<option value="MAD">Madrid</option>
+					<option value="MAL">Málaga</option>
+					<option value="MUR">Murcia</option>
+					<option value="NAV">Navarra</option>
+					<option value="ORE">Orense</option>
+					<option value="PAL">Palencia</option>
+					<option value="LAP">Las Palmas</option>
+					<option value="LAR">La Rioja</option>
+					<option value="SAL">Salamanca</option>
+					<option value="SEG">Segovia</option>
+					<option value="SEV">Sevilla</option>
+					<option value="SOR">Soria</option>
+					<option value="TAR">Tarragona</option>
+					<option value="STT">Santa Cruz de Tenerife</option>
+					<option value="TER">Teruel</option>
+					<option value="TOL">Toledo</option>
+					<option value="VAL">Valencia</option>
+					<option value="VLL">Valladolid</option>
+					<option value="VIC">Vizcaya</option>
+					<option value="ZAR">Zamora</option>
+					<option value="ZAR">Zaragoza</option>
+					<option value="CEU">Ceuta</option>
+					<option value="MEL">Meilla</option>
+					
+				</select></li>
+				<li><label for="town">Població:</label></li>
+				<li id="noclass"><input type="text" name="townn" size="50" /><span id="minired"> [No buit] </span></li>
+				<li><label for="zip">Codi postal:</label></li>
+				<li id="noclass"><input type="text" name="zip" size="50" /><span id="minired"> [No buit | Números només] </span></li>
+				<li><label for="email">Email:</label></li>
+				<li id="noclass"><input type="text" name="email" size="50" /><span id="minired"> [No buit | xxx@xxx.xxx] </span></li>
+				<li><label for="telfn">Telèfon:</label></li>
+				<li id="noclass"><input type="text" name="telfn" size="50" /><span id="minired"> [No buit | XXXXXXXXX] </span></li>
+				<!-- ---------------- BOTO ---------------- -->
+				<br><li id="noclass"><input type="submit" name="submit" value="Registre" /></li>
+			</ul>
+		</div>
+		</div>
+		</div>
+		<div class="row">
+		<div class="twelve columns">
+		<p align="center">©2016 Pràctica Programació web.</p>
+		</div>
+	</div>
+
+</form>
+</body>
+<!-- ----------------------- FI DE BODY ----------------------- -->
+</html>
