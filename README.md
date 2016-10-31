@@ -1,5 +1,9 @@
 # PR_Prog_web_UOC
 <strong>PR - Programació Web (UOC)</strong>
+By:
+<br>Jessica Olmo Madrid
+<br>Raúl Torner Martinell
+<br>Aitor Javier Santaeugenia Marí
 
 EN:<br>
 <strong>Responsive website with two games</strong> (pong and <i>"set i mig"</i>), using OOP and DOM (use of <strong>localstorage</strong> for the login).<br><br>ESP:<br>
