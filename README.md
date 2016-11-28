@@ -1,5 +1,6 @@
-# PR_Prog_web_UOC
-<strong>PR - Programació Web (UOC)</strong>
+# PR PROGRAMACION WEB
+<strong>PR - Programació Web (UOC)</strong><br>
+UNIVERSITAT OBERTA DE CATALUNYA<br><br>
 <br>By:
 <br>Jessica Olmo Madrid
 <br>Raúl Torner Martinell
