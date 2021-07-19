@@ -1,4 +1,4 @@
-# PR PROGRAMACION WEB
+# Pagina web con diversos videojuegos
 <strong>PR - Programació Web (UOC)</strong><br>
 UNIVERSITAT OBERTA DE CATALUNYA
 <br>By:
